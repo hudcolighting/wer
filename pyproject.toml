@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wer"
+version = "1.0.0"
+description = "Windows Eos Recorder - a live camera feed with lighting-console data composited on top"
+requires-python = ">=3.12,<3.13"
+license = { text = "GPL-3.0-or-later" }
+authors = [{ name = "Hudco Lighting LLC", email = "wer@hudco.lighting" }]
+
+# Runtime deps are declared in requirements.txt, which is the file the build
+# script reads. Repeating them here would create two sources of truth.
+dynamic = ["dependencies"]
+
+[project.urls]
+Homepage = "https://hudco.lighting"
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+filterwarnings = ["error::DeprecationWarning:wer.*"]

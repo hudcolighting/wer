@@ -1,0 +1,82 @@
+{"t": 127.9736, "address": "/eos/out/event/cue/1/245/fire", "typetags": "s", "args": ["End jackson special"]}
+{"t": 128.0381, "address": "/eos/out/user", "typetags": "i", "args": [0]}
+{"t": 128.0694, "address": "/eos/out/previous/cue/1/240", "typetags": "", "args": []}
+{"t": 128.1002, "address": "/eos/out/previous/cue/text", "typetags": "s", "args": ["1/240 0.2"]}
+{"t": 128.1313, "address": "/eos/out/active/cue/1/245", "typetags": "f", "args": [0.3100000023841858]}
+{"t": 128.1624, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.3100000023841858]}
+{"t": 128.1936, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/245 End jackson special 0.1 31%"]}
+{"t": 128.2259, "address": "/eos/out/pending/cue/1/250", "typetags": "", "args": []}
+{"t": 128.257, "address": "/eos/out/pending/cue/text", "typetags": "s", "args": ["1/250 Officer Line 0.2"]}
+{"t": 128.289, "address": "/eos/out/user/2/cmd", "typetags": "si", "args": ["LIVE: Cue  245 : Magic Sheet 509 #", 0]}
+{"t": 129.0369, "address": "/eos/out/active/cue", "typetags": "f", "args": [1.0]}
+{"t": 129.068, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/245 End jackson special 0.2 100%"]}
+{"t": 143.3812, "address": "/eos/out/event/macro/1", "typetags": "", "args": []}
+{"t": 143.4053, "address": "/wer/record/toggle", "typetags": "", "args": []}
+{"t": 143.5567, "address": "/eos/out/event/macro/1", "typetags": "", "args": []}
+{"t": 143.5835, "address": "/wer/record/toggle", "typetags": "", "args": []}
+{"t": 143.7069, "address": "/eos/out/event/macro/1", "typetags": "", "args": []}
+{"t": 143.7309, "address": "/wer/record/toggle", "typetags": "", "args": []}
+{"t": 143.9068, "address": "/eos/out/event/macro/1", "typetags": "", "args": []}
+{"t": 143.9336, "address": "/wer/record/toggle", "typetags": "", "args": []}
+{"t": 144.0837, "address": "/eos/out/event/macro/1", "typetags": "", "args": []}
+{"t": 144.1056, "address": "/wer/record/toggle", "typetags": "", "args": []}
+{"t": 144.2837, "address": "/eos/out/event/macro/1", "typetags": "", "args": []}
+{"t": 144.307, "address": "/wer/record/toggle", "typetags": "", "args": []}
+{"t": 144.4336, "address": "/eos/out/event/macro/1", "typetags": "", "args": []}
+{"t": 144.4567, "address": "/wer/record/toggle", "typetags": "", "args": []}
+{"t": 144.6272, "address": "/eos/out/event/macro/1", "typetags": "", "args": []}
+{"t": 144.6512, "address": "/wer/record/toggle", "typetags": "", "args": []}
+{"t": 144.8016, "address": "/eos/out/event/macro/1", "typetags": "", "args": []}
+{"t": 144.8296, "address": "/wer/record/toggle", "typetags": "", "args": []}
+{"t": 144.9784, "address": "/eos/out/event/macro/1", "typetags": "", "args": []}
+{"t": 145.0025, "address": "/wer/record/toggle", "typetags": "", "args": []}
+{"t": 145.1536, "address": "/eos/out/event/macro/1", "typetags": "", "args": []}
+{"t": 145.1779, "address": "/wer/record/toggle", "typetags": "", "args": []}
+{"t": 145.33, "address": "/eos/out/event/macro/1", "typetags": "", "args": []}
+{"t": 145.3534, "address": "/wer/record/toggle", "typetags": "", "args": []}
+{"t": 145.527, "address": "/eos/out/event/macro/1", "typetags": "", "args": []}
+{"t": 145.5511, "address": "/wer/record/toggle", "typetags": "", "args": []}
+{"t": 145.752, "address": "/eos/out/event/macro/1", "typetags": "", "args": []}
+{"t": 145.7759, "address": "/wer/record/toggle", "typetags": "", "args": []}
+{"t": 145.9522, "address": "/eos/out/event/macro/1", "typetags": "", "args": []}
+{"t": 145.9766, "address": "/wer/record/toggle", "typetags": "", "args": []}
+{"t": 146.1512, "address": "/eos/out/event/macro/1", "typetags": "", "args": []}
+{"t": 146.1768, "address": "/wer/record/toggle", "typetags": "", "args": []}
+{"t": 146.3273, "address": "/eos/out/event/macro/1", "typetags": "", "args": []}
+{"t": 146.3537, "address": "/wer/record/toggle", "typetags": "", "args": []}
+{"t": 147.4765, "address": "/eos/out/event/macro/1", "typetags": "", "args": []}
+{"t": 147.5038, "address": "/wer/record/toggle", "typetags": "", "args": []}
+{"t": 147.6768, "address": "/eos/out/event/macro/1", "typetags": "", "args": []}
+{"t": 147.7036, "address": "/wer/record/toggle", "typetags": "", "args": []}
+{"t": 147.8294, "address": "/eos/out/event/macro/1", "typetags": "", "args": []}
+{"t": 147.8521, "address": "/wer/record/toggle", "typetags": "", "args": []}
+{"t": 157.9847, "address": "/eos/out/event/cue/1/250/fire", "typetags": "s", "args": ["Officer Line"]}
+{"t": 158.0167, "address": "/eos/out/user", "typetags": "i", "args": [0]}
+{"t": 158.0483, "address": "/eos/out/previous/cue/1/245", "typetags": "", "args": []}
+{"t": 158.0786, "address": "/eos/out/previous/cue/text", "typetags": "s", "args": ["1/245 End jackson special 0.2"]}
+{"t": 158.1103, "address": "/eos/out/active/cue/1/250", "typetags": "f", "args": [0.0]}
+{"t": 158.1416, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.0]}
+{"t": 158.1738, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/250 Officer Line 0.2 0%"]}
+{"t": 158.2049, "address": "/eos/out/pending/cue", "typetags": "", "args": []}
+{"t": 158.2366, "address": "/eos/out/pending/cue/text", "typetags": "s", "args": [""]}
+{"t": 158.2681, "address": "/eos/out/user/2/cmd", "typetags": "si", "args": ["LIVE: Cue  250 : Magic Sheet 509 #", 0]}
+{"t": 158.299, "address": "/eos/out/event/cue/1/180/fire", "typetags": "s", "args": ["Start Scene"]}
+{"t": 158.331, "address": "/eos/out/user", "typetags": "i", "args": [0]}
+{"t": 158.3623, "address": "/eos/out/previous/cue", "typetags": "", "args": []}
+{"t": 158.3941, "address": "/eos/out/previous/cue/text", "typetags": "s", "args": [""]}
+{"t": 158.4259, "address": "/eos/out/active/cue/1/180", "typetags": "f", "args": [0.009999999776482582]}
+{"t": 158.4578, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.009999999776482582]}
+{"t": 158.4904, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/180 Start Scene 4.9 1%"]}
+{"t": 158.5217, "address": "/eos/out/pending/cue/1/185", "typetags": "", "args": []}
+{"t": 158.5538, "address": "/eos/out/pending/cue/text", "typetags": "s", "args": ["1/185 Move USL 2.9"]}
+{"t": 158.5853, "address": "/eos/out/user/2/cmd", "typetags": "si", "args": ["LIVE: Cue  180 Part 1 : Magic Sheet 509 #", 0]}
+{"t": 159.0848, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.20999999344348907]}
+{"t": 159.1166, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/180 Start Scene 3.9 21%"]}
+{"t": 160.0868, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.4099999964237213]}
+{"t": 160.1185, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/180 Start Scene 2.9 41%"]}
+{"t": 161.0876, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.6100000143051147]}
+{"t": 161.1179, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/180 Start Scene 1.9 61%"]}
+{"t": 162.1123, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.8100000023841858]}
+{"t": 162.1438, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/180 Start Scene 0.9 81%"]}
+{"t": 163.1429, "address": "/eos/out/active/cue", "typetags": "f", "args": [1.0]}
+{"t": 163.1749, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/180 Start Scene 5.0 100%"]}

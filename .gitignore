@@ -1,0 +1,55 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# --- venv (keep this out of any sync engine) ---
+.venv/
+
+# --- PyInstaller ---
+build/
+dist/
+*.spec.bak
+
+# --- Vendored ffmpeg ---
+# The binary is ~97 MB. It is NOT committed; `tools/fetch-ffmpeg.ps1` pulls the
+# pinned build and verifies its SHA256, so a fresh clone is one command away
+# from a byte-identical tree. See vendor/ffmpeg/PIN.md for the rationale.
+vendor/ffmpeg/*.exe
+
+# --- Runtime output ---
+logs/
+*.log
+recordings/
+
+# --- Captured protocol traffic ---
+# Real console captures used as test fixtures DO belong in git
+# (tests/fixtures/), but ad-hoc scratch captures do not.
+captures/
+
+# --- Working notes, not part of the program ---
+private/
+reports/
+
+# --- Windows / editors ---
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# PyInstaller regenerates this from build.ps1's arguments on every run.
+# build.ps1 is the single source of truth for how the exe is assembled;
+# committing the spec would create a second one that silently drifts.
+/Wer.spec
+
+# A convenience shortcut to whatever build.ps1 last produced.
+Wer.lnk
+
+# Sidecars extracted from a recording while inspecting it. Wer embeds
+# these as attachments and cleans them up; anything left loose is debris.
+*.bus.jsonl
+*.markers.csv
+*.chapters.txt

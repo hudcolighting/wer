@@ -1,0 +1,14 @@
+# Normalise line endings so diffs stay clean across machines.
+* text=auto eol=lf
+
+# Windows-native scripts must keep CRLF.
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Show files are JSON and should diff as text: human-readable and diffable.
+*.wer text eol=lf
+
+# Captured protocol traffic is binary; never let git mangle it.
+*.pcap binary
+*.bin  binary

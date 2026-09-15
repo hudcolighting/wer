@@ -1,0 +1,145 @@
+{"t": 0.1043, "address": "/eos/out/user", "typetags": "i", "args": [1]}
+{"t": 0.1369, "address": "/eos/out/previous/cue/1/54", "typetags": "", "args": []}
+{"t": 0.1663, "address": "/eos/out/previous/cue/text", "typetags": "s", "args": ["1/54 Adriana Xs SL 2.9"]}
+{"t": 0.1969, "address": "/eos/out/active/cue/1/58", "typetags": "f", "args": [1.0]}
+{"t": 0.2277, "address": "/eos/out/active/cue", "typetags": "f", "args": [1.0]}
+{"t": 0.2592, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/58 Adriana Xs Center 3.0 100%"]}
+{"t": 0.2892, "address": "/eos/out/pending/cue/1/62", "typetags": "", "args": []}
+{"t": 0.3212, "address": "/eos/out/pending/cue/text", "typetags": "s", "args": ["1/62 Enter Dromio 2.9"]}
+{"t": 0.3522, "address": "/eos/out/softkey/1", "typetags": "s", "args": ["Address"]}
+{"t": 0.3837, "address": "/eos/out/softkey/2", "typetags": "s", "args": ["Query"]}
+{"t": 0.4153, "address": "/eos/out/softkey/3", "typetags": "s", "args": ["Snapshot"]}
+{"t": 0.4463, "address": "/eos/out/softkey/4", "typetags": "s", "args": ["Highlight"]}
+{"t": 0.4779, "address": "/eos/out/softkey/5", "typetags": "s", "args": ["Assert"]}
+{"t": 0.5084, "address": "/eos/out/softkey/6", "typetags": "s", "args": ["Color Path"]}
+{"t": 0.5399, "address": "/eos/out/softkey/7", "typetags": "s", "args": ["Preview"]}
+{"t": 0.5713, "address": "/eos/out/softkey/8", "typetags": "s", "args": ["Fader"]}
+{"t": 0.6028, "address": "/eos/out/softkey/9", "typetags": "s", "args": ["Offset"]}
+{"t": 0.6344, "address": "/eos/out/wheel", "typetags": "f", "args": [0.0]}
+{"t": 0.666, "address": "/eos/out/switch", "typetags": "f", "args": [0.0]}
+{"t": 0.6971, "address": "/eos/out/show/name", "typetags": "s", "args": ["Comedy EOS"]}
+{"t": 0.7279, "address": "/eos/out/active/chan", "typetags": "s", "args": [""]}
+{"t": 0.759, "address": "/eos/out/color/hs", "typetags": "", "args": []}
+{"t": 0.7891, "address": "/eos/out/pantilt", "typetags": "", "args": []}
+{"t": 0.8199, "address": "/eos/out/xyz", "typetags": "", "args": []}
+{"t": 0.851, "address": "/eos/out/event/state", "typetags": "i", "args": [1]}
+{"t": 0.8818, "address": "/eos/out/event/locked", "typetags": "i", "args": [0]}
+{"t": 0.9126, "address": "/eos/out/previous/cue/1/54", "typetags": "", "args": []}
+{"t": 0.9434, "address": "/eos/out/previous/cue/text", "typetags": "s", "args": ["1/54 Adriana Xs SL 2.9"]}
+{"t": 0.9747, "address": "/eos/out/active/cue/1/58", "typetags": "f", "args": [1.0]}
+{"t": 1.0054, "address": "/eos/out/active/cue", "typetags": "f", "args": [1.0]}
+{"t": 1.0378, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/58 Adriana Xs Center 3.0 100%"]}
+{"t": 1.0697, "address": "/eos/out/pending/cue/1/62", "typetags": "", "args": []}
+{"t": 1.1011, "address": "/eos/out/pending/cue/text", "typetags": "s", "args": ["1/62 Enter Dromio 2.9"]}
+{"t": 1.1316, "address": "/eos/out/softkey/1", "typetags": "s", "args": ["Address"]}
+{"t": 1.1622, "address": "/eos/out/softkey/2", "typetags": "s", "args": ["Query"]}
+{"t": 1.1925, "address": "/eos/out/softkey/3", "typetags": "s", "args": ["Snapshot"]}
+{"t": 1.2244, "address": "/eos/out/softkey/4", "typetags": "s", "args": ["Highlight"]}
+{"t": 1.2553, "address": "/eos/out/softkey/5", "typetags": "s", "args": ["Assert"]}
+{"t": 1.2853, "address": "/eos/out/softkey/6", "typetags": "s", "args": ["Color Path"]}
+{"t": 1.3158, "address": "/eos/out/softkey/7", "typetags": "s", "args": ["Preview"]}
+{"t": 1.3472, "address": "/eos/out/softkey/8", "typetags": "s", "args": ["Fader"]}
+{"t": 1.3781, "address": "/eos/out/softkey/9", "typetags": "s", "args": ["Offset"]}
+{"t": 1.4084, "address": "/eos/out/softkey/10", "typetags": "s", "args": [""]}
+{"t": 1.4401, "address": "/eos/out/softkey/11", "typetags": "s", "args": [""]}
+{"t": 1.4707, "address": "/eos/out/softkey/12", "typetags": "s", "args": [""]}
+{"t": 1.5017, "address": "/eos/out/user/0/cmd", "typetags": "si", "args": ["LIVE: Cue  8 : ", 0]}
+{"t": 1.5329, "address": "/eos/out/user/1/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : ", 0]}
+{"t": 1.5639, "address": "/eos/out/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : ", 0]}
+{"t": 1.5951, "address": "/eos/out/user/2/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : Sub  Full - Error: Syntax Error", 1]}
+{"t": 1.6273, "address": "/eos/out/user", "typetags": "i", "args": [1]}
+{"t": 43.358, "address": "/eos/out/user/1/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : Go To Cue ", 0]}
+{"t": 43.3625, "address": "/eos/out/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : Go To Cue ", 0]}
+{"t": 43.4373, "address": "/eos/out/user/1/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : Go To Cue 58 Pan - Error: Syntax Error", 1]}
+{"t": 43.4403, "address": "/eos/out/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : Go To Cue 58 Pan - Error: Syntax Error", 1]}
+{"t": 43.4438, "address": "/eos/out/softkey/1", "typetags": "s", "args": ["Manual"]}
+{"t": 43.4473, "address": "/eos/out/softkey/2", "typetags": "s", "args": ["Scenes"]}
+{"t": 43.4513, "address": "/eos/out/softkey/3", "typetags": "s", "args": ["MovesOnly"]}
+{"t": 43.4555, "address": "/eos/out/softkey/4", "typetags": "s", "args": ["Complete"]}
+{"t": 43.4585, "address": "/eos/out/softkey/5", "typetags": "s", "args": ["MinusLinks"]}
+{"t": 43.4626, "address": "/eos/out/softkey/6", "typetags": "s", "args": ["Marks"]}
+{"t": 43.466, "address": "/eos/out/softkey/7", "typetags": "s", "args": ["SingleParam"]}
+{"t": 43.469, "address": "/eos/out/softkey/8", "typetags": "s", "args": ["MultiParam"]}
+{"t": 43.4724, "address": "/eos/out/softkey/9", "typetags": "s", "args": ["Timecode"]}
+{"t": 45.0106, "address": "/eos/out/user/1/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : Go To Cue 58 + - Error: Syntax Error", 1]}
+{"t": 45.014, "address": "/eos/out/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : Go To Cue 58 + - Error: Syntax Error", 1]}
+{"t": 45.6109, "address": "/eos/out/user/1/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : Go To Cue 58", 0]}
+{"t": 45.6143, "address": "/eos/out/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : Go To Cue 58", 0]}
+{"t": 45.9827, "address": "/eos/out/user/1/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : Go To Cue 5", 0]}
+{"t": 45.9861, "address": "/eos/out/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : Go To Cue 5", 0]}
+{"t": 46.1321, "address": "/eos/out/user/1/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : Go To Cue ", 0]}
+{"t": 46.1354, "address": "/eos/out/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : Go To Cue ", 0]}
+{"t": 46.2844, "address": "/eos/out/user/1/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : ", 0]}
+{"t": 46.2887, "address": "/eos/out/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : ", 0]}
+{"t": 46.3341, "address": "/eos/out/softkey/1", "typetags": "s", "args": ["Address"]}
+{"t": 46.337, "address": "/eos/out/softkey/2", "typetags": "s", "args": ["Query"]}
+{"t": 46.341, "address": "/eos/out/softkey/3", "typetags": "s", "args": ["Snapshot"]}
+{"t": 46.344, "address": "/eos/out/softkey/4", "typetags": "s", "args": ["Highlight"]}
+{"t": 46.3475, "address": "/eos/out/softkey/5", "typetags": "s", "args": ["Assert"]}
+{"t": 46.3505, "address": "/eos/out/softkey/6", "typetags": "s", "args": ["Color Path"]}
+{"t": 46.354, "address": "/eos/out/softkey/7", "typetags": "s", "args": ["Preview"]}
+{"t": 46.357, "address": "/eos/out/softkey/8", "typetags": "s", "args": ["Fader"]}
+{"t": 46.36, "address": "/eos/out/softkey/9", "typetags": "s", "args": ["Offset"]}
+{"t": 74.0588, "address": "/eos/out/user/1/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : Spacebar Go Disable #", 0]}
+{"t": 74.0628, "address": "/eos/out/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : Spacebar Go Disable #", 0]}
+{"t": 75.0492, "address": "/eos/out/notify/setup/list/0/1", "typetags": "i", "args": [0]}
+{"t": 75.1016, "address": "/eos/out/user/1/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : Spacebar Go Enable #", 0]}
+{"t": 75.104, "address": "/eos/out/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : Spacebar Go Enable #", 0]}
+{"t": 76.5944, "address": "/eos/out/notify/setup/list/0/1", "typetags": "i", "args": [1]}
+{"t": 80.204, "address": "/eos/out/user/1/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : Cue 1 / 58 #", 0]}
+{"t": 80.2069, "address": "/eos/out/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : Cue 1 / 58 #", 0]}
+{"t": 80.2101, "address": "/eos/out/softkey/1", "typetags": "s", "args": ["Attributes "]}
+{"t": 80.2135, "address": "/eos/out/softkey/2", "typetags": "s", "args": ["Fw/Hg"]}
+{"t": 80.2178, "address": "/eos/out/softkey/3", "typetags": "s", "args": ["AutoMark Off"]}
+{"t": 80.222, "address": "/eos/out/softkey/4", "typetags": "s", "args": ["Link/Loop"]}
+{"t": 80.2263, "address": "/eos/out/softkey/5", "typetags": "s", "args": ["Execute"]}
+{"t": 80.2288, "address": "/eos/out/softkey/6", "typetags": "s", "args": ["Trace"]}
+{"t": 80.2318, "address": "/eos/out/softkey/7", "typetags": "s", "args": ["Alert Time"]}
+{"t": 80.2344, "address": "/eos/out/softkey/8", "typetags": "s", "args": ["Timecode"]}
+{"t": 80.2374, "address": "/eos/out/softkey/9", "typetags": "s", "args": [""]}
+{"t": 80.2414, "address": "/eos/out/softkey/10", "typetags": "s", "args": ["Assert"]}
+{"t": 80.2459, "address": "/eos/out/softkey/11", "typetags": "s", "args": ["Offset"]}
+{"t": 80.2491, "address": "/eos/out/softkey/12", "typetags": "s", "args": ["AutoBlk Clean"]}
+{"t": 80.4177, "address": "/eos/out/softkey/1", "typetags": "s", "args": ["Address"]}
+{"t": 80.4205, "address": "/eos/out/softkey/2", "typetags": "s", "args": ["Query"]}
+{"t": 80.4241, "address": "/eos/out/softkey/3", "typetags": "s", "args": ["Snapshot"]}
+{"t": 80.4276, "address": "/eos/out/softkey/4", "typetags": "s", "args": ["Highlight"]}
+{"t": 80.4305, "address": "/eos/out/softkey/5", "typetags": "s", "args": ["Assert"]}
+{"t": 80.4352, "address": "/eos/out/softkey/6", "typetags": "s", "args": ["Color Path"]}
+{"t": 80.4383, "address": "/eos/out/softkey/7", "typetags": "s", "args": ["Preview"]}
+{"t": 80.4411, "address": "/eos/out/softkey/8", "typetags": "s", "args": ["Fader"]}
+{"t": 80.444, "address": "/eos/out/softkey/9", "typetags": "s", "args": ["Offset"]}
+{"t": 80.4475, "address": "/eos/out/softkey/10", "typetags": "s", "args": [""]}
+{"t": 80.451, "address": "/eos/out/softkey/11", "typetags": "s", "args": [""]}
+{"t": 80.454, "address": "/eos/out/softkey/12", "typetags": "s", "args": [""]}
+{"t": 80.4575, "address": "/eos/out/user/1/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : ", 0]}
+{"t": 80.4609, "address": "/eos/out/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : ", 0]}
+{"t": 83.6283, "address": "/eos/out/softkey/1", "typetags": "s", "args": ["Manual"]}
+{"t": 83.6324, "address": "/eos/out/softkey/2", "typetags": "s", "args": ["Scenes"]}
+{"t": 83.6347, "address": "/eos/out/softkey/3", "typetags": "s", "args": ["MovesOnly"]}
+{"t": 83.6377, "address": "/eos/out/softkey/4", "typetags": "s", "args": ["Complete"]}
+{"t": 83.6407, "address": "/eos/out/softkey/5", "typetags": "s", "args": ["MinusLinks"]}
+{"t": 83.6442, "address": "/eos/out/softkey/6", "typetags": "s", "args": ["Marks"]}
+{"t": 83.6473, "address": "/eos/out/softkey/7", "typetags": "s", "args": ["SingleParam"]}
+{"t": 83.6512, "address": "/eos/out/softkey/8", "typetags": "s", "args": ["MultiParam"]}
+{"t": 83.6551, "address": "/eos/out/softkey/9", "typetags": "s", "args": ["Timecode"]}
+{"t": 83.6577, "address": "/eos/out/user/1/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : Go To Cue ", 0]}
+{"t": 83.6607, "address": "/eos/out/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : Go To Cue ", 0]}
+{"t": 85.2736, "address": "/eos/out/user/1/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : Go To Cue 5", 0]}
+{"t": 85.2771, "address": "/eos/out/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : Go To Cue 5", 0]}
+{"t": 85.4945, "address": "/eos/out/user/1/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : Go To Cue 58", 0]}
+{"t": 85.4969, "address": "/eos/out/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : Go To Cue 58", 0]}
+{"t": 85.7696, "address": "/eos/out/event/cue/1/58/fire", "typetags": "s", "args": ["Adriana Xs Center"]}
+{"t": 85.7968, "address": "/eos/out/softkey/1", "typetags": "s", "args": ["Address"]}
+{"t": 85.7996, "address": "/eos/out/softkey/2", "typetags": "s", "args": ["Query"]}
+{"t": 85.8026, "address": "/eos/out/softkey/3", "typetags": "s", "args": ["Snapshot"]}
+{"t": 85.8061, "address": "/eos/out/softkey/4", "typetags": "s", "args": ["Highlight"]}
+{"t": 85.8101, "address": "/eos/out/softkey/5", "typetags": "s", "args": ["Assert"]}
+{"t": 85.8131, "address": "/eos/out/softkey/6", "typetags": "s", "args": ["Color Path"]}
+{"t": 85.8156, "address": "/eos/out/softkey/7", "typetags": "s", "args": ["Preview"]}
+{"t": 85.8186, "address": "/eos/out/softkey/8", "typetags": "s", "args": ["Fader"]}
+{"t": 85.8221, "address": "/eos/out/softkey/9", "typetags": "s", "args": ["Offset"]}
+{"t": 85.8256, "address": "/eos/out/user/1/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : Go To Cue 58 #", 0]}
+{"t": 85.8301, "address": "/eos/out/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : Go To Cue 58 #", 0]}
+{"t": 87.2135, "address": "/eos/out/user/1/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : ", 0]}
+{"t": 87.2157, "address": "/eos/out/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : ", 0]}

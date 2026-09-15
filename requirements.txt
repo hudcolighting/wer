@@ -1,0 +1,35 @@
+# Wer (Windows Eos Recorder) -- runtime dependencies
+# Stack is LOCKED. Python 3.12 x64 only.
+#
+# Pinned exactly, not to a range. Every one of these ships inside a build, and
+# THIRD-PARTY-NOTICES.md names the version of each and says what it is used
+# under -- down to which libraries are compiled into which DLL. A range means
+# the notices describe one build and pip installs another, and the first
+# anybody knows of it is when the versions in the notices are wrong. Upgrading
+# is a deliberate act: change the pin, then re-read the notices.
+
+# UI + CPU compositing (QPainter/QImage).
+# Essentials, NOT full PySide6: the Addons package drags in QtWebEngine and
+# friends (~500 MB) that we never touch, and a release is one portable exe.
+PySide6-Essentials==6.9.3
+
+# Frame buffers.
+numpy==2.5.3
+
+# Camera capture. MSMF preferred, DSHOW fallback.
+opencv-python==4.14.0.94
+
+# DirectShow device enumeration -- OpenCV cannot give friendly device
+# names on Windows, which is the whole reason this is here.
+pygrabber==0.2
+
+# pygrabber's own dependency: its metadata asks for comtypes >=1.1.7, so pip
+# installs whatever that resolves to on the day. Pinned here because it ships
+# and THIRD-PARTY-NOTICES.md names this exact version -- a component that ships
+# has to be one somebody chose, not one a resolver picked.
+comtypes==1.4.16
+
+# OSC and sACN (E1.31) are deliberately NOT here.
+# The rule: pure-socket implementations, no third-party protocol libraries.
+# MIDI (python-rtmidi, for MTC and MSC) and Art-Net were dropped on
+# 13 Sep 2026: Wer will not use them.

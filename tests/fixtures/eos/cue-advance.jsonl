@@ -1,0 +1,198 @@
+{"t": 0.0762, "address": "/eos/out/user", "typetags": "i", "args": [1]}
+{"t": 0.1076, "address": "/eos/out/previous/cue/1/62", "typetags": "", "args": []}
+{"t": 0.1393, "address": "/eos/out/previous/cue/text", "typetags": "s", "args": ["1/62 Enter Dromio 2.9"]}
+{"t": 0.1701, "address": "/eos/out/active/cue/1/64", "typetags": "f", "args": [1.0]}
+{"t": 0.2008, "address": "/eos/out/active/cue", "typetags": "f", "args": [1.0]}
+{"t": 0.2317, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/64 Dromio Quote 0.0 100%"]}
+{"t": 0.2619, "address": "/eos/out/pending/cue/1/65", "typetags": "", "args": []}
+{"t": 0.2928, "address": "/eos/out/pending/cue/text", "typetags": "s", "args": ["1/65 Antiph Quote 0.0"]}
+{"t": 0.3242, "address": "/eos/out/softkey/1", "typetags": "s", "args": ["Address"]}
+{"t": 0.355, "address": "/eos/out/softkey/2", "typetags": "s", "args": ["Query"]}
+{"t": 0.3858, "address": "/eos/out/softkey/3", "typetags": "s", "args": ["Snapshot"]}
+{"t": 0.4183, "address": "/eos/out/softkey/4", "typetags": "s", "args": ["Highlight"]}
+{"t": 0.4482, "address": "/eos/out/softkey/5", "typetags": "s", "args": ["Assert"]}
+{"t": 0.4793, "address": "/eos/out/softkey/6", "typetags": "s", "args": ["Color Path"]}
+{"t": 0.5107, "address": "/eos/out/softkey/7", "typetags": "s", "args": ["Preview"]}
+{"t": 0.5414, "address": "/eos/out/softkey/8", "typetags": "s", "args": ["Fader"]}
+{"t": 0.5728, "address": "/eos/out/softkey/9", "typetags": "s", "args": ["Offset"]}
+{"t": 0.6029, "address": "/eos/out/wheel", "typetags": "f", "args": [0.0]}
+{"t": 0.6338, "address": "/eos/out/switch", "typetags": "f", "args": [0.0]}
+{"t": 0.665, "address": "/eos/out/show/name", "typetags": "s", "args": ["Comedy EOS"]}
+{"t": 0.6967, "address": "/eos/out/active/chan", "typetags": "s", "args": [""]}
+{"t": 0.7284, "address": "/eos/out/color/hs", "typetags": "", "args": []}
+{"t": 0.7596, "address": "/eos/out/pantilt", "typetags": "", "args": []}
+{"t": 0.7905, "address": "/eos/out/xyz", "typetags": "", "args": []}
+{"t": 0.8207, "address": "/eos/out/event/state", "typetags": "i", "args": [1]}
+{"t": 0.8591, "address": "/eos/out/event/locked", "typetags": "i", "args": [0]}
+{"t": 0.8808, "address": "/eos/out/previous/cue/1/62", "typetags": "", "args": []}
+{"t": 0.9113, "address": "/eos/out/previous/cue/text", "typetags": "s", "args": ["1/62 Enter Dromio 2.9"]}
+{"t": 0.9435, "address": "/eos/out/active/cue/1/64", "typetags": "f", "args": [1.0]}
+{"t": 0.9745, "address": "/eos/out/active/cue", "typetags": "f", "args": [1.0]}
+{"t": 1.0066, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/64 Dromio Quote 0.0 100%"]}
+{"t": 1.0377, "address": "/eos/out/pending/cue/1/65", "typetags": "", "args": []}
+{"t": 1.0694, "address": "/eos/out/pending/cue/text", "typetags": "s", "args": ["1/65 Antiph Quote 0.0"]}
+{"t": 1.101, "address": "/eos/out/softkey/1", "typetags": "s", "args": ["Address"]}
+{"t": 1.1316, "address": "/eos/out/softkey/2", "typetags": "s", "args": ["Query"]}
+{"t": 1.1628, "address": "/eos/out/softkey/3", "typetags": "s", "args": ["Snapshot"]}
+{"t": 1.1937, "address": "/eos/out/softkey/4", "typetags": "s", "args": ["Highlight"]}
+{"t": 1.2247, "address": "/eos/out/softkey/5", "typetags": "s", "args": ["Assert"]}
+{"t": 1.2559, "address": "/eos/out/softkey/6", "typetags": "s", "args": ["Color Path"]}
+{"t": 1.2865, "address": "/eos/out/softkey/7", "typetags": "s", "args": ["Preview"]}
+{"t": 1.3183, "address": "/eos/out/softkey/8", "typetags": "s", "args": ["Fader"]}
+{"t": 1.3495, "address": "/eos/out/softkey/9", "typetags": "s", "args": ["Offset"]}
+{"t": 1.38, "address": "/eos/out/softkey/10", "typetags": "s", "args": [""]}
+{"t": 1.4107, "address": "/eos/out/softkey/11", "typetags": "s", "args": [""]}
+{"t": 1.4413, "address": "/eos/out/softkey/12", "typetags": "s", "args": [""]}
+{"t": 1.4729, "address": "/eos/out/user/0/cmd", "typetags": "si", "args": ["LIVE: Cue  8 : ", 0]}
+{"t": 1.5031, "address": "/eos/out/user/1/cmd", "typetags": "si", "args": ["LIVE: Cue  64 : Go To Cue 64 #", 0]}
+{"t": 1.5338, "address": "/eos/out/cmd", "typetags": "si", "args": ["LIVE: Cue  64 : Go To Cue 64 #", 0]}
+{"t": 1.5642, "address": "/eos/out/user/2/cmd", "typetags": "si", "args": ["LIVE: Cue  64 : Sub  Full - Error: Syntax Error", 1]}
+{"t": 1.5954, "address": "/eos/out/user", "typetags": "i", "args": [1]}
+{"t": 32.6426, "address": "/eos/out/user/1/cmd", "typetags": "si", "args": ["LIVE: Cue  64 : ", 0]}
+{"t": 32.6455, "address": "/eos/out/cmd", "typetags": "si", "args": ["LIVE: Cue  64 : ", 0]}
+{"t": 44.9309, "address": "/eos/out/event/cue/1/65/fire", "typetags": "s", "args": ["Antiph Quote"]}
+{"t": 45.0065, "address": "/eos/out/user/1/cmd", "typetags": "si", "args": ["LIVE: Cue  65 : ", 0]}
+{"t": 45.0108, "address": "/eos/out/cmd", "typetags": "si", "args": ["LIVE: Cue  65 : ", 0]}
+{"t": 45.0148, "address": "/eos/out/user/2/cmd", "typetags": "si", "args": ["LIVE: Cue  65 : Sub  Full - Error: Syntax Error", 1]}
+{"t": 45.0193, "address": "/eos/out/previous/cue/1/64", "typetags": "", "args": []}
+{"t": 45.0218, "address": "/eos/out/previous/cue/text", "typetags": "s", "args": ["1/64 Dromio Quote 0.0"]}
+{"t": 45.0248, "address": "/eos/out/active/cue/1/65", "typetags": "f", "args": [1.0]}
+{"t": 45.0293, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/65 Antiph Quote 0.0 100%"]}
+{"t": 45.0323, "address": "/eos/out/pending/cue/1/66", "typetags": "", "args": []}
+{"t": 45.0353, "address": "/eos/out/pending/cue/text", "typetags": "s", "args": ["1/66 Dromio Quote 0.0"]}
+{"t": 46.1838, "address": "/eos/out/event/cue/1/66/fire", "typetags": "s", "args": ["Dromio Quote"]}
+{"t": 46.2064, "address": "/eos/out/user/1/cmd", "typetags": "si", "args": ["LIVE: Cue  66 : ", 0]}
+{"t": 46.2108, "address": "/eos/out/cmd", "typetags": "si", "args": ["LIVE: Cue  66 : ", 0]}
+{"t": 46.2138, "address": "/eos/out/user/2/cmd", "typetags": "si", "args": ["LIVE: Cue  66 : Sub  Full - Error: Syntax Error", 1]}
+{"t": 46.2168, "address": "/eos/out/previous/cue/1/65", "typetags": "", "args": []}
+{"t": 46.2208, "address": "/eos/out/previous/cue/text", "typetags": "s", "args": ["1/65 Antiph Quote 0.0"]}
+{"t": 46.2238, "address": "/eos/out/active/cue/1/66", "typetags": "f", "args": [1.0]}
+{"t": 46.2278, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/66 Dromio Quote 0.0 100%"]}
+{"t": 46.2313, "address": "/eos/out/pending/cue/1/67", "typetags": "", "args": []}
+{"t": 46.2343, "address": "/eos/out/pending/cue/text", "typetags": "s", "args": ["1/67 Antiph Quote 0.0"]}
+{"t": 47.558, "address": "/eos/out/user/2/cmd", "typetags": "si", "args": ["LIVE: Cue  66 : Sub ", 0]}
+{"t": 48.9595, "address": "/eos/out/event/cue/1/67/fire", "typetags": "s", "args": ["Antiph Quote"]}
+{"t": 48.9828, "address": "/eos/out/user/1/cmd", "typetags": "si", "args": ["LIVE: Cue  67 : ", 0]}
+{"t": 48.9855, "address": "/eos/out/cmd", "typetags": "si", "args": ["LIVE: Cue  67 : ", 0]}
+{"t": 48.9888, "address": "/eos/out/user/2/cmd", "typetags": "si", "args": ["LIVE: Cue  67 : Sub ", 0]}
+{"t": 48.9923, "address": "/eos/out/previous/cue/1/66", "typetags": "", "args": []}
+{"t": 48.9953, "address": "/eos/out/previous/cue/text", "typetags": "s", "args": ["1/66 Dromio Quote 0.0"]}
+{"t": 48.9993, "address": "/eos/out/active/cue/1/67", "typetags": "f", "args": [1.0]}
+{"t": 49.0024, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/67 Antiph Quote 0.0 100%"]}
+{"t": 49.0064, "address": "/eos/out/pending/cue/1/68", "typetags": "", "args": []}
+{"t": 49.0095, "address": "/eos/out/pending/cue/text", "typetags": "s", "args": ["1/68 Dromio Quote 0.0"]}
+{"t": 49.6596, "address": "/eos/out/event/cue/1/68/fire", "typetags": "s", "args": ["Dromio Quote"]}
+{"t": 49.7353, "address": "/eos/out/user/1/cmd", "typetags": "si", "args": ["LIVE: Cue  68 : ", 0]}
+{"t": 49.7392, "address": "/eos/out/cmd", "typetags": "si", "args": ["LIVE: Cue  68 : ", 0]}
+{"t": 49.7423, "address": "/eos/out/user/2/cmd", "typetags": "si", "args": ["LIVE: Cue  68 : Sub ", 0]}
+{"t": 49.7453, "address": "/eos/out/previous/cue/1/67", "typetags": "", "args": []}
+{"t": 49.7494, "address": "/eos/out/previous/cue/text", "typetags": "s", "args": ["1/67 Antiph Quote 0.0"]}
+{"t": 49.7524, "address": "/eos/out/active/cue/1/68", "typetags": "f", "args": [1.0]}
+{"t": 49.7555, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/68 Dromio Quote 0.0 100%"]}
+{"t": 49.7585, "address": "/eos/out/pending/cue/1/69", "typetags": "", "args": []}
+{"t": 49.7626, "address": "/eos/out/pending/cue/text", "typetags": "s", "args": ["1/69 Antiph Quote 0.0"]}
+{"t": 50.3347, "address": "/eos/out/event/cue/1/69/fire", "typetags": "s", "args": ["Antiph Quote"]}
+{"t": 50.4093, "address": "/eos/out/user/1/cmd", "typetags": "si", "args": ["LIVE: Cue  69 : ", 0]}
+{"t": 50.4122, "address": "/eos/out/cmd", "typetags": "si", "args": ["LIVE: Cue  69 : ", 0]}
+{"t": 50.4152, "address": "/eos/out/user/2/cmd", "typetags": "si", "args": ["LIVE: Cue  69 : Sub ", 0]}
+{"t": 50.4185, "address": "/eos/out/previous/cue/1/68", "typetags": "", "args": []}
+{"t": 50.421, "address": "/eos/out/previous/cue/text", "typetags": "s", "args": ["1/68 Dromio Quote 0.0"]}
+{"t": 50.424, "address": "/eos/out/active/cue/1/69", "typetags": "f", "args": [1.0]}
+{"t": 50.4271, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/69 Antiph Quote 0.0 100%"]}
+{"t": 50.4315, "address": "/eos/out/pending/cue/1/70", "typetags": "", "args": []}
+{"t": 50.4355, "address": "/eos/out/pending/cue/text", "typetags": "s", "args": ["1/70 Dromio Quote 0.0"]}
+{"t": 51.9856, "address": "/eos/out/event/cue/1/70/fire", "typetags": "s", "args": ["Dromio Quote"]}
+{"t": 52.0298, "address": "/eos/out/user/1/cmd", "typetags": "si", "args": ["LIVE: Cue  70 : ", 0]}
+{"t": 52.0328, "address": "/eos/out/cmd", "typetags": "si", "args": ["LIVE: Cue  70 : ", 0]}
+{"t": 52.0358, "address": "/eos/out/user/2/cmd", "typetags": "si", "args": ["LIVE: Cue  70 : Sub ", 0]}
+{"t": 52.0393, "address": "/eos/out/previous/cue/1/69", "typetags": "", "args": []}
+{"t": 52.0422, "address": "/eos/out/previous/cue/text", "typetags": "s", "args": ["1/69 Antiph Quote 0.0"]}
+{"t": 52.0462, "address": "/eos/out/active/cue/1/70", "typetags": "f", "args": [1.0]}
+{"t": 52.0488, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/70 Dromio Quote 0.0 100%"]}
+{"t": 52.0524, "address": "/eos/out/pending/cue/1/71", "typetags": "", "args": []}
+{"t": 52.0554, "address": "/eos/out/pending/cue/text", "typetags": "s", "args": ["1/71 Antiph Quote 0.0"]}
+{"t": 52.9295, "address": "/eos/out/event/cue/1/71/fire", "typetags": "s", "args": ["Antiph Quote"]}
+{"t": 53.0031, "address": "/eos/out/user/1/cmd", "typetags": "si", "args": ["LIVE: Cue  71 : ", 0]}
+{"t": 53.006, "address": "/eos/out/cmd", "typetags": "si", "args": ["LIVE: Cue  71 : ", 0]}
+{"t": 53.0095, "address": "/eos/out/user/2/cmd", "typetags": "si", "args": ["LIVE: Cue  71 : Sub ", 0]}
+{"t": 53.0125, "address": "/eos/out/previous/cue/1/70", "typetags": "", "args": []}
+{"t": 53.0155, "address": "/eos/out/previous/cue/text", "typetags": "s", "args": ["1/70 Dromio Quote 0.0"]}
+{"t": 53.0185, "address": "/eos/out/active/cue/1/71", "typetags": "f", "args": [1.0]}
+{"t": 53.0232, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/71 Antiph Quote 0.0 100%"]}
+{"t": 53.0261, "address": "/eos/out/pending/cue/1/72", "typetags": "", "args": []}
+{"t": 53.0291, "address": "/eos/out/pending/cue/text", "typetags": "s", "args": ["1/72 Dromio Quote 0.0"]}
+{"t": 53.1766, "address": "/eos/out/event/cue/1/72/fire", "typetags": "s", "args": ["Dromio Quote"]}
+{"t": 53.2265, "address": "/eos/out/user/1/cmd", "typetags": "si", "args": ["LIVE: Cue  72 : ", 0]}
+{"t": 53.2299, "address": "/eos/out/cmd", "typetags": "si", "args": ["LIVE: Cue  72 : ", 0]}
+{"t": 53.2329, "address": "/eos/out/user/2/cmd", "typetags": "si", "args": ["LIVE: Cue  72 : Sub ", 0]}
+{"t": 53.237, "address": "/eos/out/previous/cue/1/71", "typetags": "", "args": []}
+{"t": 53.2395, "address": "/eos/out/previous/cue/text", "typetags": "s", "args": ["1/71 Antiph Quote 0.0"]}
+{"t": 53.2424, "address": "/eos/out/active/cue/1/72", "typetags": "f", "args": [1.0]}
+{"t": 53.2464, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/72 Dromio Quote 0.0 100%"]}
+{"t": 53.2505, "address": "/eos/out/pending/cue/1/73", "typetags": "", "args": []}
+{"t": 53.2545, "address": "/eos/out/pending/cue/text", "typetags": "s", "args": ["1/73 Confused Quote 0.0"]}
+{"t": 53.5218, "address": "/eos/out/event/cue/1/73/fire", "typetags": "s", "args": ["Confused Quote"]}
+{"t": 53.602, "address": "/eos/out/user/1/cmd", "typetags": "si", "args": ["LIVE: Cue  73 : ", 0]}
+{"t": 53.605, "address": "/eos/out/cmd", "typetags": "si", "args": ["LIVE: Cue  73 : ", 0]}
+{"t": 53.608, "address": "/eos/out/user/2/cmd", "typetags": "si", "args": ["LIVE: Cue  73 : Sub ", 0]}
+{"t": 53.6108, "address": "/eos/out/previous/cue/1/72", "typetags": "", "args": []}
+{"t": 53.6141, "address": "/eos/out/previous/cue/text", "typetags": "s", "args": ["1/72 Dromio Quote 0.0"]}
+{"t": 53.6168, "address": "/eos/out/active/cue/1/73", "typetags": "f", "args": [1.0]}
+{"t": 53.6214, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/73 Confused Quote 0.0 100%"]}
+{"t": 53.6241, "address": "/eos/out/pending/cue/1/74", "typetags": "", "args": []}
+{"t": 53.6271, "address": "/eos/out/pending/cue/text", "typetags": "s", "args": ["1/74 Bit Ends 2.0"]}
+{"t": 53.9029, "address": "/eos/out/event/cue/1/74/fire", "typetags": "s", "args": ["Bit Ends"]}
+{"t": 53.9793, "address": "/eos/out/user/1/cmd", "typetags": "si", "args": ["LIVE: Cue  74 : ", 0]}
+{"t": 53.9822, "address": "/eos/out/cmd", "typetags": "si", "args": ["LIVE: Cue  74 : ", 0]}
+{"t": 53.9852, "address": "/eos/out/user/2/cmd", "typetags": "si", "args": ["LIVE: Cue  74 : Sub ", 0]}
+{"t": 53.9877, "address": "/eos/out/previous/cue/1/73", "typetags": "", "args": []}
+{"t": 53.9913, "address": "/eos/out/previous/cue/text", "typetags": "s", "args": ["1/73 Confused Quote 0.0"]}
+{"t": 53.9943, "address": "/eos/out/active/cue/1/74", "typetags": "f", "args": [0.029999999329447746]}
+{"t": 53.9983, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.029999999329447746]}
+{"t": 54.0018, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/74 Bit Ends 1.9 3%"]}
+{"t": 54.0058, "address": "/eos/out/pending/cue/1/78", "typetags": "", "args": []}
+{"t": 54.0093, "address": "/eos/out/pending/cue/text", "typetags": "s", "args": ["1/78 Dromio Exits 2.9"]}
+{"t": 54.9624, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.5400000214576721]}
+{"t": 54.9653, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/74 Bit Ends 0.9 54%"]}
+{"t": 55.9666, "address": "/eos/out/active/cue", "typetags": "f", "args": [1.0]}
+{"t": 55.97, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/74 Bit Ends 2.0 100%"]}
+{"t": 56.4929, "address": "/eos/out/event/cue/1/78/fire", "typetags": "s", "args": ["Dromio Exits"]}
+{"t": 56.5167, "address": "/eos/out/user/1/cmd", "typetags": "si", "args": ["LIVE: Cue  78 : ", 0]}
+{"t": 56.5191, "address": "/eos/out/cmd", "typetags": "si", "args": ["LIVE: Cue  78 : ", 0]}
+{"t": 56.5228, "address": "/eos/out/user/2/cmd", "typetags": "si", "args": ["LIVE: Cue  78 : Sub ", 0]}
+{"t": 56.5261, "address": "/eos/out/previous/cue/1/74", "typetags": "", "args": []}
+{"t": 56.5297, "address": "/eos/out/previous/cue/text", "typetags": "s", "args": ["1/74 Bit Ends 2.0"]}
+{"t": 56.5326, "address": "/eos/out/active/cue/1/78", "typetags": "f", "args": [0.0]}
+{"t": 56.5366, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.0]}
+{"t": 56.5412, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/78 Dromio Exits 2.9 0%"]}
+{"t": 56.5442, "address": "/eos/out/pending/cue/1/82", "typetags": "", "args": []}
+{"t": 56.5472, "address": "/eos/out/pending/cue/text", "typetags": "s", "args": ["1/82 Triangle transitiion 6.0"]}
+{"t": 57.5027, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.3400000035762787]}
+{"t": 57.5057, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/78 Dromio Exits 1.9 34%"]}
+{"t": 58.5023, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.699999988079071]}
+{"t": 58.5062, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/78 Dromio Exits 0.9 70%"]}
+{"t": 59.5008, "address": "/eos/out/active/cue", "typetags": "f", "args": [1.0]}
+{"t": 59.5037, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/78 Dromio Exits 2.9 100%"]}
+{"t": 59.6054, "address": "/eos/out/event/cue/1/82/fire", "typetags": "s", "args": ["Triangle transitiion"]}
+{"t": 59.6515, "address": "/eos/out/user/1/cmd", "typetags": "si", "args": ["LIVE: Cue  82 : ", 0]}
+{"t": 59.655, "address": "/eos/out/cmd", "typetags": "si", "args": ["LIVE: Cue  82 : ", 0]}
+{"t": 59.658, "address": "/eos/out/user/2/cmd", "typetags": "si", "args": ["LIVE: Cue  82 : Sub ", 0]}
+{"t": 59.6615, "address": "/eos/out/previous/cue/1/78", "typetags": "", "args": []}
+{"t": 59.6645, "address": "/eos/out/previous/cue/text", "typetags": "s", "args": ["1/78 Dromio Exits 2.9"]}
+{"t": 59.6685, "address": "/eos/out/active/cue/1/82", "typetags": "f", "args": [0.0]}
+{"t": 59.672, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.0]}
+{"t": 59.675, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/82 Triangle transitiion 6.0 0%"]}
+{"t": 59.678, "address": "/eos/out/pending/cue/1/86", "typetags": "", "args": []}
+{"t": 59.6816, "address": "/eos/out/pending/cue/text", "typetags": "s", "args": ["1/86 Button 0.0"]}
+{"t": 60.6517, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.1599999964237213]}
+{"t": 60.6552, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/82 Triangle transitiion 5.0 16%"]}
+{"t": 61.6728, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.33000001311302185]}
+{"t": 61.6768, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/82 Triangle transitiion 4.0 33%"]}
+{"t": 62.7405, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.5099999904632568]}
+{"t": 62.771, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/82 Triangle transitiion 2.9 51%"]}
+{"t": 63.7464, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.6800000071525574]}
+{"t": 63.7772, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/82 Triangle transitiion 1.9 68%"]}
+{"t": 64.7684, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.8500000238418579]}
+{"t": 64.7994, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/82 Triangle transitiion 0.9 85%"]}
+{"t": 65.7984, "address": "/eos/out/active/cue", "typetags": "f", "args": [1.0]}
+{"t": 65.8281, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/82 Triangle transitiion 6.0 100%"]}

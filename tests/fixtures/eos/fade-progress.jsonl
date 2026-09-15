@@ -1,0 +1,147 @@
+{"t": 0.1047, "address": "/eos/out/user", "typetags": "i", "args": [2]}
+{"t": 0.1349, "address": "/eos/out/previous/cue/1/78", "typetags": "", "args": []}
+{"t": 0.1661, "address": "/eos/out/previous/cue/text", "typetags": "s", "args": ["1/78 Dromio Exits 2.9"]}
+{"t": 0.1976, "address": "/eos/out/active/cue/1/82", "typetags": "f", "args": [1.0]}
+{"t": 0.2292, "address": "/eos/out/active/cue", "typetags": "f", "args": [1.0]}
+{"t": 0.2598, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/82 Triangle transitiion 6.0 100%"]}
+{"t": 0.2899, "address": "/eos/out/pending/cue/1/86", "typetags": "", "args": []}
+{"t": 0.3205, "address": "/eos/out/pending/cue/text", "typetags": "s", "args": ["1/86 Button 0.0"]}
+{"t": 0.3517, "address": "/eos/out/softkey/1", "typetags": "s", "args": ["Hold"]}
+{"t": 0.383, "address": "/eos/out/softkey/2", "typetags": "s", "args": ["Execute"]}
+{"t": 0.4145, "address": "/eos/out/softkey/3", "typetags": "s", "args": ["Manual"]}
+{"t": 0.4468, "address": "/eos/out/softkey/5", "typetags": "s", "args": ["Properties"]}
+{"t": 0.4777, "address": "/eos/out/softkey/6", "typetags": "s", "args": ["Query"]}
+{"t": 0.5093, "address": "/eos/out/softkey/11", "typetags": "s", "args": ["Offset"]}
+{"t": 0.5403, "address": "/eos/out/wheel", "typetags": "f", "args": [0.0]}
+{"t": 0.5716, "address": "/eos/out/switch", "typetags": "f", "args": [0.0]}
+{"t": 0.6037, "address": "/eos/out/show/name", "typetags": "s", "args": ["Comedy EOS"]}
+{"t": 0.6347, "address": "/eos/out/active/chan", "typetags": "s", "args": [""]}
+{"t": 0.6667, "address": "/eos/out/color/hs", "typetags": "", "args": []}
+{"t": 0.6988, "address": "/eos/out/pantilt", "typetags": "", "args": []}
+{"t": 0.7305, "address": "/eos/out/xyz", "typetags": "", "args": []}
+{"t": 0.7622, "address": "/eos/out/event/state", "typetags": "i", "args": [1]}
+{"t": 0.7947, "address": "/eos/out/event/locked", "typetags": "i", "args": [0]}
+{"t": 0.8267, "address": "/eos/out/previous/cue/1/78", "typetags": "", "args": []}
+{"t": 0.8577, "address": "/eos/out/previous/cue/text", "typetags": "s", "args": ["1/78 Dromio Exits 2.9"]}
+{"t": 0.8889, "address": "/eos/out/active/cue/1/82", "typetags": "f", "args": [1.0]}
+{"t": 0.9205, "address": "/eos/out/active/cue", "typetags": "f", "args": [1.0]}
+{"t": 0.9511, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/82 Triangle transitiion 6.0 100%"]}
+{"t": 0.9817, "address": "/eos/out/pending/cue/1/86", "typetags": "", "args": []}
+{"t": 1.0134, "address": "/eos/out/pending/cue/text", "typetags": "s", "args": ["1/86 Button 0.0"]}
+{"t": 1.0446, "address": "/eos/out/softkey/1", "typetags": "s", "args": ["Hold"]}
+{"t": 1.0767, "address": "/eos/out/softkey/2", "typetags": "s", "args": ["Execute"]}
+{"t": 1.1079, "address": "/eos/out/softkey/3", "typetags": "s", "args": ["Manual"]}
+{"t": 1.1387, "address": "/eos/out/softkey/4", "typetags": "s", "args": [""]}
+{"t": 1.1696, "address": "/eos/out/softkey/5", "typetags": "s", "args": ["Properties"]}
+{"t": 1.2007, "address": "/eos/out/softkey/6", "typetags": "s", "args": ["Query"]}
+{"t": 1.2315, "address": "/eos/out/softkey/7", "typetags": "s", "args": [""]}
+{"t": 1.2622, "address": "/eos/out/softkey/8", "typetags": "s", "args": [""]}
+{"t": 1.2934, "address": "/eos/out/softkey/9", "typetags": "s", "args": [""]}
+{"t": 1.3248, "address": "/eos/out/softkey/10", "typetags": "s", "args": [""]}
+{"t": 1.3562, "address": "/eos/out/softkey/11", "typetags": "s", "args": ["Offset"]}
+{"t": 1.3874, "address": "/eos/out/softkey/12", "typetags": "s", "args": [""]}
+{"t": 1.4189, "address": "/eos/out/user/0/cmd", "typetags": "si", "args": ["LIVE: Cue  8 : ", 0]}
+{"t": 1.4497, "address": "/eos/out/user/1/cmd", "typetags": "si", "args": ["LIVE: Cue  82 : ", 0]}
+{"t": 1.4818, "address": "/eos/out/user/2/cmd", "typetags": "si", "args": ["LIVE: Cue  82 : Sub ", 0]}
+{"t": 1.513, "address": "/eos/out/cmd", "typetags": "si", "args": ["LIVE: Cue  82 : Sub ", 0]}
+{"t": 1.5446, "address": "/eos/out/user", "typetags": "i", "args": [1]}
+{"t": 1.5766, "address": "/eos/out/softkey/1", "typetags": "s", "args": ["Address"]}
+{"t": 1.6083, "address": "/eos/out/softkey/2", "typetags": "s", "args": ["Query"]}
+{"t": 1.64, "address": "/eos/out/softkey/3", "typetags": "s", "args": ["Snapshot"]}
+{"t": 1.6799, "address": "/eos/out/softkey/4", "typetags": "s", "args": ["Highlight"]}
+{"t": 1.7026, "address": "/eos/out/softkey/5", "typetags": "s", "args": ["Assert"]}
+{"t": 1.733, "address": "/eos/out/softkey/6", "typetags": "s", "args": ["Color Path"]}
+{"t": 1.7638, "address": "/eos/out/softkey/7", "typetags": "s", "args": ["Preview"]}
+{"t": 1.7955, "address": "/eos/out/softkey/8", "typetags": "s", "args": ["Fader"]}
+{"t": 1.8283, "address": "/eos/out/softkey/9", "typetags": "s", "args": ["Offset"]}
+{"t": 1.8597, "address": "/eos/out/softkey/11", "typetags": "s", "args": [""]}
+{"t": 6.4607, "address": "/eos/out/user/2/cmd", "typetags": "si", "args": ["LIVE: Cue  82 : Cue 1 / 82 #", 0]}
+{"t": 12.5578, "address": "/eos/out/user/2/cmd", "typetags": "si", "args": ["LIVE: Cue  82 : Go To Cue ", 0]}
+{"t": 13.1575, "address": "/eos/out/user/2/cmd", "typetags": "si", "args": ["LIVE: Cue  82 : Go To Cue 5", 0]}
+{"t": 13.4577, "address": "/eos/out/user/2/cmd", "typetags": "si", "args": ["LIVE: Cue  82 : Go To Cue 587", 0]}
+{"t": 15.4579, "address": "/eos/out/user/2/cmd", "typetags": "si", "args": ["LIVE: Cue  82 : Go To Cue 587 Error : Cue Does Not Exist", 1]}
+{"t": 15.9834, "address": "/eos/out/user/2/cmd", "typetags": "si", "args": ["LIVE: Cue  82 : Go To Cue 5871", 0]}
+{"t": 16.2095, "address": "/eos/out/user/2/cmd", "typetags": "si", "args": ["LIVE: Cue  82 : Go To Cue 5871 Error: Number Out Of Range", 1]}
+{"t": 18.8326, "address": "/eos/out/user/2/cmd", "typetags": "si", "args": ["LIVE: Cue  82 : Go To Cue 5871", 0]}
+{"t": 19.0572, "address": "/eos/out/user/2/cmd", "typetags": "si", "args": ["LIVE: Cue  82 : Go To Cue 587", 0]}
+{"t": 19.7281, "address": "/eos/out/user/2/cmd", "typetags": "si", "args": ["LIVE: Cue  82 : Go To Cue 58", 0]}
+{"t": 22.5551, "address": "/eos/out/user/2/cmd", "typetags": "si", "args": ["LIVE: Cue  82 : Go To Cue 58 Time ", 0]}
+{"t": 23.1542, "address": "/eos/out/user/2/cmd", "typetags": "si", "args": ["LIVE: Cue  82 : Go To Cue 58 Time 0:01", 0]}
+{"t": 23.5297, "address": "/eos/out/user/2/cmd", "typetags": "si", "args": ["LIVE: Cue  82 : Go To Cue 58 Time 0:10", 0]}
+{"t": 24.352, "address": "/eos/out/event/cue/1/58/fire", "typetags": "s", "args": ["Adriana Xs Center"]}
+{"t": 24.4248, "address": "/eos/out/user/1/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : ", 0]}
+{"t": 24.4278, "address": "/eos/out/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : ", 0]}
+{"t": 24.4325, "address": "/eos/out/user/2/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : Go To Cue 58 Time 0:10 #", 0]}
+{"t": 24.4361, "address": "/eos/out/previous/cue/1/54", "typetags": "", "args": []}
+{"t": 24.439, "address": "/eos/out/previous/cue/text", "typetags": "s", "args": ["1/54 Adriana Xs SL 2.9"]}
+{"t": 24.443, "address": "/eos/out/active/cue/1/58", "typetags": "f", "args": [0.0]}
+{"t": 24.4465, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.0]}
+{"t": 24.4505, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/58 Adriana Xs Center 19.9 0%"]}
+{"t": 24.4535, "address": "/eos/out/pending/cue/1/62", "typetags": "", "args": []}
+{"t": 24.4559, "address": "/eos/out/pending/cue/text", "typetags": "s", "args": ["1/62 Enter Dromio 2.9"]}
+{"t": 25.4234, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.05000000074505806]}
+{"t": 25.4259, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/58 Adriana Xs Center 18.8 5%"]}
+{"t": 26.4432, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.10000000149011612]}
+{"t": 26.4458, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/58 Adriana Xs Center 17.8 10%"]}
+{"t": 27.4633, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.15000000596046448]}
+{"t": 27.4667, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/58 Adriana Xs Center 16.8 15%"]}
+{"t": 28.4843, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.20999999344348907]}
+{"t": 28.4873, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/58 Adriana Xs Center 15.8 21%"]}
+{"t": 29.5075, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.25999999046325684]}
+{"t": 29.5104, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/58 Adriana Xs Center 14.8 26%"]}
+{"t": 30.4744, "address": "/eos/out/user/2/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : Go To Cue ", 0]}
+{"t": 30.4773, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.30000001192092896]}
+{"t": 30.4803, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/58 Adriana Xs Center 13.8 30%"]}
+{"t": 31.4685, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.3499999940395355]}
+{"t": 31.4713, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/58 Adriana Xs Center 12.8 35%"]}
+{"t": 31.743, "address": "/eos/out/user/2/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : Go To Cue 5", 0]}
+{"t": 31.7464, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.36000001430511475]}
+{"t": 31.7494, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/58 Adriana Xs Center 12.6 36%"]}
+{"t": 32.0445, "address": "/eos/out/user/2/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : Go To Cue 58", 0]}
+{"t": 32.0474, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.3799999952316284]}
+{"t": 32.0503, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/58 Adriana Xs Center 12.3 38%"]}
+{"t": 33.0347, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.4300000071525574]}
+{"t": 33.038, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/58 Adriana Xs Center 11.3 43%"]}
+{"t": 34.0319, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.47999998927116394]}
+{"t": 34.0344, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/58 Adriana Xs Center 10.3 48%"]}
+{"t": 35.0544, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.5299999713897705]}
+{"t": 35.0582, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/58 Adriana Xs Center 9.3 53%"]}
+{"t": 36.0546, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.5799999833106995]}
+{"t": 36.057, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/58 Adriana Xs Center 8.3 58%"]}
+{"t": 37.0583, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.6299999952316284]}
+{"t": 37.0622, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/58 Adriana Xs Center 7.2 63%"]}
+{"t": 38.0573, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.6800000071525574]}
+{"t": 38.0602, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/58 Adriana Xs Center 6.2 68%"]}
+{"t": 39.0578, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.7300000190734863]}
+{"t": 39.0608, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/58 Adriana Xs Center 5.2 73%"]}
+{"t": 40.0675, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.7799999713897705]}
+{"t": 40.0705, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/58 Adriana Xs Center 4.3 78%"]}
+{"t": 41.0675, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.8299999833106995]}
+{"t": 41.0715, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/58 Adriana Xs Center 3.2 83%"]}
+{"t": 42.0869, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.8799999952316284]}
+{"t": 42.0899, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/58 Adriana Xs Center 2.2 88%"]}
+{"t": 43.0927, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.9300000071525574]}
+{"t": 43.095, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/58 Adriana Xs Center 1.2 93%"]}
+{"t": 44.0932, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.9900000095367432]}
+{"t": 44.0967, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/58 Adriana Xs Center 0.2 99%"]}
+{"t": 45.1138, "address": "/eos/out/active/cue", "typetags": "f", "args": [1.0]}
+{"t": 45.1159, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/58 Adriana Xs Center 3.0 100%"]}
+{"t": 45.9319, "address": "/eos/out/event/cue/1/58/fire", "typetags": "s", "args": ["Adriana Xs Center"]}
+{"t": 46.0025, "address": "/eos/out/user/2/cmd", "typetags": "si", "args": ["LIVE: Cue  58 : Go To Cue 58 #", 0]}
+{"t": 50.1675, "address": "/eos/out/event/cue/1/62/fire", "typetags": "s", "args": ["Enter Dromio"]}
+{"t": 50.194, "address": "/eos/out/user/1/cmd", "typetags": "si", "args": ["LIVE: Cue  62 : ", 0]}
+{"t": 50.1976, "address": "/eos/out/cmd", "typetags": "si", "args": ["LIVE: Cue  62 : ", 0]}
+{"t": 50.2016, "address": "/eos/out/user/2/cmd", "typetags": "si", "args": ["LIVE: Cue  62 : ", 0]}
+{"t": 50.2045, "address": "/eos/out/previous/cue/1/58", "typetags": "", "args": []}
+{"t": 50.2078, "address": "/eos/out/previous/cue/text", "typetags": "s", "args": ["1/58 Adriana Xs Center 3.0"]}
+{"t": 50.2107, "address": "/eos/out/active/cue/1/62", "typetags": "f", "args": [0.0]}
+{"t": 50.2139, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.0]}
+{"t": 50.2158, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/62 Enter Dromio 2.9 0%"]}
+{"t": 50.2189, "address": "/eos/out/pending/cue/1/64", "typetags": "", "args": []}
+{"t": 50.2218, "address": "/eos/out/pending/cue/text", "typetags": "s", "args": ["1/64 Dromio Quote 0.0"]}
+{"t": 51.1847, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.3499999940395355]}
+{"t": 51.1886, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/62 Enter Dromio 1.9 35%"]}
+{"t": 52.1844, "address": "/eos/out/active/cue", "typetags": "f", "args": [0.699999988079071]}
+{"t": 52.1879, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/62 Enter Dromio 0.9 70%"]}
+{"t": 53.183, "address": "/eos/out/active/cue", "typetags": "f", "args": [1.0]}
+{"t": 53.1864, "address": "/eos/out/active/cue/text", "typetags": "s", "args": ["1/62 Enter Dromio 2.9 100%"]}

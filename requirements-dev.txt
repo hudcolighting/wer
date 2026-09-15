@@ -1,0 +1,12 @@
+-r requirements.txt
+
+# Not pinned, and deliberately not: nothing here ships. The runtime pins are
+# exact because THIRD-PARTY-NOTICES.md describes those exact versions; a test
+# runner that moves on has no notice to contradict.
+
+# Packaging.
+pyinstaller>=6.10
+
+# Tests. Protocol parsers must be testable with no Qt in the process.
+pytest>=8.3
+pytest-cov>=5.0
