@@ -5,7 +5,12 @@ into the picture: cue number and label, the command line, the channels being
 worked on. It is for a lighting designer or programmer who wants a recording
 of a tech that stays useful afterwards, not a phone video of a dark stage.
 
+![Wer mid-take: the camera picture with the live cue and its label, the next cue and fade bar, the show name, the clock and date, the record time, the time in cue and the seconds left in the fade laid over it](assets/readme/recording.png)
+
 Windows only. Version **1.0.0**. Free software under the GPL v3 or later.
+**Download:** the installer for the current version is on the
+[Releases page](https://github.com/hudcolighting/wer/releases/latest);
+there is nothing else to install. See [Installing](#installing).
 
 ## What it does
 
@@ -61,7 +66,9 @@ it leave the rest alone.
 
 ## Installing
 
-If you were handed `Wer-<version>-setup.exe`, run it: a per-user install into
+Download `Wer-<version>-setup.exe` from the [Releases
+page](https://github.com/hudcolighting/wer/releases/latest), or use the one
+you were handed, and run it: a per-user install into
 `%LOCALAPPDATA%\Programs\Wer`, with no administrator prompt on a locked-down
 venue machine and an entry in Add/Remove Programs. Wer is not code-signed, so
 Windows warns about an unsigned application the first time -- **More info**,
