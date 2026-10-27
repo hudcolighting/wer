@@ -14,6 +14,7 @@ from __future__ import annotations
 import logging
 import re
 import socket
+import threading
 import time
 from collections.abc import Callable
 from dataclasses import dataclass
@@ -145,6 +146,10 @@ class EosConnection(Connection):
     #: all until something changes. A quiet console during a scene change is
     #: normal, so this is generous. Going STALE after 30 seconds would have the
     #: status light flickering all night for no reason.
+    #:
+    #: It applies only where silence is all there is to go on: UDP, and a TCP
+    #: socket keepalive could not be set on. With keepalive on, a TCP link is
+    #: never taken for Stale by silence at all; see refresh_staleness.
     stale_after = 120.0
 
     #: How long cue fires may keep arriving with no cue-state traffic behind
@@ -178,7 +183,8 @@ class EosConnection(Connection):
     #: Windows' own defaults do not help, measured on the development machine:
     #: keepalive off, and once on, 7200 s of silence before the first probe.
     #: A blip shorter than the ten probes (30 s) costs no reconnect; a desk
-    #: gone for good is noticed well inside the 120 s it takes to read Stale.
+    #: gone for good is noticed well inside the 120 s the silence rule took to
+    #: read Stale, which is why keepalive replaces that rule on TCP.
     keepalive_idle = 15
     keepalive_interval = 3
     keepalive_probes = 10
@@ -222,6 +228,11 @@ class EosConnection(Connection):
         #: than against a threshold shrunk to make a test quick.
         self._clock = time.perf_counter
         self._socket: socket.socket | None = None
+        #: Set while the socket in use has keepalive on, which makes the
+        #: probes the check on the desk instead of silence. An Event rather
+        #: than a plain flag because refresh_staleness reads it from the UI
+        #: thread as well as from this connection's own.
+        self._keepalive_watching = threading.Event()
 
     def forget_published(self) -> list[str]:
         """Drop every key this connection put on the bus, and reset the parser.
@@ -366,7 +377,11 @@ class EosConnection(Connection):
                 sock, self.keepalive_idle, self.keepalive_interval,
                 self.keepalive_probes,
             )
-            if why_not is not None:
+            if why_not is None:
+                # Before the link can read Live, so there is no moment in
+                # which the silence rule could still take it for Stale.
+                self._keepalive_watching.set()
+            else:
                 # The link still works as it always did, but a desk that loses
                 # power would go unnoticed, and nobody is watching Wer to
                 # notice for it. Say so, and say what to do about it.
@@ -447,7 +462,8 @@ class EosConnection(Connection):
                 for packet in packets:
                     self._consume(packet)
         finally:
-            self.publish(f"{self.namespace}.connected", False)
+            self._keepalive_watching.clear()
+            self._link_down()
             self._socket = None
             try:
                 sock.close()
@@ -484,12 +500,25 @@ class EosConnection(Connection):
                     return
                 self._consume(datagram)
         finally:
-            self.publish(f"{self.namespace}.connected", False)
+            self._link_down()
             self._socket = None
             try:
                 sock.close()
             except OSError:
                 pass
+
+    def _link_down(self) -> None:
+        """Say on the bus that this connection run is over.
+
+        The last fire is blanked with it. Its timestamp is when that cue went,
+        and a redial cannot vouch for it: the state dump names the live cue
+        without firing it, so a dump naming the same cue -- still up, or fired
+        again while the link was down -- would take the old fire's start for
+        its own. Blank, the time in cue reads "--" until the desk next fires a
+        cue.
+        """
+        self.publish(f"{self.namespace}.connected", False)
+        self.publish(f"{self.namespace}.cue.fired", "")
 
     def _handshake(self, sock: socket.socket, framer: object) -> None:
         """Bind the OSC user and subscribe. Both are opt-in.
@@ -575,7 +604,10 @@ class EosConnection(Connection):
             self._check_user_binding(decoded)
             result = self.parser.handle(decoded)
             for update in result.updates:
-                self.publish(update.key, update.value, stale_after=update.stale_after)
+                self.publish(
+                    update.key, update.value, stale_after=update.stale_after,
+                    force=update.force,
+                )
             for event in result.events:
                 log.info("Cue fired: %s", event.display)
                 if self._on_cue_fired is not None:
@@ -652,7 +684,26 @@ class EosConnection(Connection):
         silent -- the operator keeps calling cues, nobody has any reason to
         look at Wer, and the recording quietly claims the last cue it heard
         for the rest of the act.
+
+        On TCP with keepalive on, silence decides nothing, and the link stays
+        Live with eos.connected true for as long as the socket is open. A
+        quiet desk is the ordinary state between cues, not a sign of trouble:
+        on two full-dress takes on 26 Oct 2026 over TCP 3032 the socket never
+        dropped in three and a half hours, while silences ran to about five
+        minutes, so every Stale the two-minute rule gave was false -- and each
+        one blanked the time in cue. The probes are the check instead. A desk
+        that loses power, or a network that stays down, stops answering them
+        and the read fails inside 45 s, sooner than the silence rule noticed
+        either. What that gives up is a desk that hangs while its operating
+        system still answers probes: it reads Live until it is rebooted, and
+        the operator sitting at it sees that at once.
+
+        UDP has nothing to probe -- datagrams simply stop -- so silence is all
+        it has, and it keeps the rule. So does a TCP socket that refused
+        keepalive, which the log has already said.
         """
+        if self._keepalive_watching.is_set():
+            return
         was = self.status.state
         super().refresh_staleness()
         now = self.status.state

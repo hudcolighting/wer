@@ -26,8 +26,9 @@ from wer.core.databus import DataBus
 __all__ = ["SAMPLE_SOURCE", "sample_bus", "sample_frame"]
 
 #: The source every sample value is published under, so a preview value can
-#: always be told from a real one. The time-in-cue widget relies on it: a
-#: sample bus never fires a cue, so it shows a stand-in time for these.
+#: always be told from a real one. The time-in-cue widget relies on it: the
+#: sample fire is stamped when the bus was built, which would read 0:00, so it
+#: shows a stand-in time for these.
 SAMPLE_SOURCE = "sample"
 _SOURCE = SAMPLE_SOURCE
 
@@ -45,6 +46,8 @@ _VALUES: dict[str, object] = {
     "eos.cue.active.progress": 0.62,
     "eos.cue.active.duration": 3.0,
     "eos.cue.active.remaining": 1.1,
+    # The fire event's "list/number", naming the live cue as a real one does.
+    "eos.cue.fired": "1/58",
     "eos.cue.pending.number": "62",
     "eos.cue.pending.label": "Enter Jasper",
     "eos.cue.previous.number": "54",

@@ -115,6 +115,9 @@ def test_the_console_socket_asks_for_keepalive_probes() -> None:
                 == connection.keepalive_interval
             )
             assert sock.getsockopt(tcp, socket.TCP_KEEPCNT) == connection.keepalive_probes
+            assert connection._keepalive_watching.is_set(), (
+                "probes are on, yet silence would still be taken for a lost desk"
+            )
         finally:
             connection.stop()
 
@@ -123,7 +126,8 @@ def test_the_console_socket_asks_for_keepalive_probes() -> None:
         + connection.keepalive_interval * connection.keepalive_probes
     )
     assert gives_up_after < connection.stale_after, (
-        "a desk that is gone should be noticed before the link even reads Stale"
+        "keepalive replaces the silence rule on TCP, so it has to notice a "
+        "desk that is gone sooner than that rule did"
     )
 
 
@@ -196,6 +200,9 @@ def test_a_socket_that_refuses_keepalive_is_said_out_loud(
             assert wait_until(
                 lambda: connection.status.state is ConnectionState.WAITING
             ), "a refused keepalive must not stop the connection working"
+            assert not connection._keepalive_watching.is_set(), (
+                "with no probes, silence is the only check left"
+            )
         finally:
             connection.stop()
 

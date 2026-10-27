@@ -131,6 +131,62 @@ def test_fire_event_display_is_marker_ready() -> None:
     assert match.display == "1/65 Antiph Quote"
 
 
+# ------------------------------------------------------------ when a cue went
+
+
+def _fired_updates(name: str) -> list[BusUpdate]:
+    """Every eos.cue.fired update a fresh parser makes from a capture."""
+    parser = EosParser()
+    return [
+        update
+        for message in load(name)
+        for update in parser.handle(message).updates
+        if update.key == "eos.cue.fired"
+    ]
+
+
+def test_every_fire_says_which_cue_went_and_is_news_even_unchanged() -> None:
+    """eos.cue.fired is where the time in cue counts from. It names the list
+    and the number, and every fire is announced, because the bus stays quiet
+    about a repeated value and a cue fired again is a new start."""
+    fired = _fired_updates("cue-advance.jsonl")
+    assert [u.value for u in fired] == [
+        "1/65", "1/66", "1/67", "1/68", "1/69", "1/70",
+        "1/71", "1/72", "1/73", "1/74", "1/78", "1/82",
+    ]
+    assert all(u.force for u in fired), "a fire was published as a mere repeat"
+    assert all(u.stale_after is None for u in fired), "when a cue went does not expire"
+
+
+def test_firing_the_live_cue_again_is_a_fire_too() -> None:
+    """cmdline-and-cue-fire.jsonl is Go To Cue 58 with 58 already live: the
+    fire repeats the value the bus already holds."""
+    fired = _fired_updates("cmdline-and-cue-fire.jsonl")
+    assert [(u.value, u.force) for u in fired] == [("1/58", True)]
+
+
+def test_only_the_fire_event_says_a_cue_went() -> None:
+    """The numbered address, the /text and the connect dump all name the live
+    cue without it having gone, and a desk re-sends them whenever it likes.
+    Any of them touching eos.cue.fired would move the start of the time in
+    cue."""
+    for path in sorted(FIXTURES.glob("*.jsonl")):
+        parser = EosParser()
+        for message in load(path.name):
+            for update in parser.handle(message).updates:
+                if update.key == "eos.cue.fired":
+                    assert message.address.endswith("/fire"), (
+                        f"{path.name}: {message.address} said a cue fired"
+                    )
+
+
+def test_the_connect_dump_names_the_live_cue_without_a_fire() -> None:
+    state, fires = replay("connect-state-dump.jsonl")
+    assert state["eos.cue.active.number"] == "58"
+    assert not fires
+    assert "eos.cue.fired" not in state
+
+
 # ---------------------------------------------------------------- fade progress
 
 

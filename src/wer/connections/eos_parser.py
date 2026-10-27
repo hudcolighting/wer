@@ -29,6 +29,14 @@ Key namespace
                                          reports once the fade has landed
     eos.cue.active.fading          bool
 
+    eos.cue.fired                  str   "<list>/<number>" of the cue that last
+                                         fired. Set by the fire event and by
+                                         nothing else, and announced on every
+                                         fire, the live cue fired again
+                                         included, so its timestamp is when
+                                         that cue went. The connection blanks
+                                         it when the link drops.
+
     eos.cue.pending.list/.number/.label/.text
     eos.cue.previous.list/.number/.label/.text
 
@@ -88,6 +96,10 @@ class BusUpdate:
     key: str
     value: Any
     stale_after: float | None = None
+    #: Announce it even when the value has not changed. The bus stays quiet
+    #: about a repeat, which is right for a desk re-sending its state, and
+    #: wrong for a cue fired again: that is news, and its time is the point.
+    force: bool = False
 
 
 @dataclass(frozen=True, slots=True)
@@ -265,6 +277,26 @@ class EosParser:
             self._active_list, self._active_number = cue_list, number
             self._fade_duration = None
             out.updates += [
+                # When the cue went. The desk sends no time with a fire, so
+                # the moment it arrives is the time, and this key is the only
+                # thing that stamps it: the numbered address, the /text and
+                # the connect dump all re-send the live cue without it having
+                # fired, and the time in cue used to be read from the number,
+                # which every one of those moves. Forced, because firing the
+                # live cue again publishes the same value and is still a new
+                # start -- it drops a marker and a chapter too.
+                #
+                # First, ahead of the live cue it names. These reach the bus
+                # one key at a time while frames are drawn, and published last
+                # it left a moment with the new cue live and the old fire
+                # still on the bus, which the time in cue can only read as a
+                # cue that moved without firing: "--" drawn into the frame at
+                # a GO. First, the moment in between holds a fire newer than
+                # the live cue, which can only be one whose cue is on its way.
+                BusUpdate(
+                    self._key("cue.fired"), f"{cue_list}/{number}", NO_EXPIRY,
+                    force=True,
+                ),
                 BusUpdate(self._key("cue.active.list"), cue_list),
                 BusUpdate(self._key("cue.active.number"), number),
                 BusUpdate(self._key("cue.active.label"), label),

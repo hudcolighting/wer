@@ -426,9 +426,15 @@ class Connection(ABC):
 
     # ------------------------------------------------------------ publishing
 
-    def publish(self, key: str, value: object, *, stale_after: float | None = None) -> None:
+    def publish(
+        self, key: str, value: object, *, stale_after: float | None = None,
+        force: bool = False,
+    ) -> None:
+        """Put a value on the bus. ``force`` announces it even when unchanged;
+        see DataBus.publish."""
         self.bus.publish(
-            key, value, source_connection_id=self.id, stale_after=stale_after
+            key, value, source_connection_id=self.id, stale_after=stale_after,
+            force=force,
         )
 
     @property

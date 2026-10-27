@@ -453,6 +453,110 @@ def test_eos_socket_open_but_silent_is_waiting_not_live(bus: DataBus) -> None:
         server.close()
 
 
+def _framed(address: str, *args) -> bytes:
+    """One message as a desk sends it over TCP 3032."""
+    from wer.connections.osc import LengthPrefixFramer, encode_message
+
+    return LengthPrefixFramer.frame(encode_message(address, *args))
+
+
+def _capture_stream(name: str) -> tuple[bytes, int]:
+    """A capture as the TCP stream a desk sends, and how many packets it is."""
+    path = Path(__file__).parent / "fixtures" / "eos" / name
+    records = [
+        json.loads(line)
+        for line in path.read_text(encoding="utf-8").splitlines()
+        if line.strip()
+    ]
+    stream = b"".join(_framed(r["address"], *r["args"]) for r in records)
+    return stream, len(records)
+
+
+def test_every_cue_fire_is_news_on_the_bus_the_live_cue_again_included(
+    bus: DataBus, tmp_path
+) -> None:
+    """The time in cue starts from eos.cue.fired, and the bus says nothing
+    about a value published again unchanged. Go To Cue on the live cue
+    publishes "1/58" over "1/58", and it is still a new start, a new marker
+    and a new chapter -- so subscribers and the take's bus log both have to
+    hear it."""
+    from wer.connections.osc import encode_message
+    from wer.core.buslog import BusLogger
+
+    connection = EosConnection("eos", bus, EosSettings())
+    connection._set_state(ConnectionState.WAITING)
+    heard: list[object] = []
+    bus.subscribe("eos.cue.fired", lambda entry: heard.append(entry.value))
+    logger = BusLogger(bus)
+    path = tmp_path / "take.bus.jsonl"
+    assert logger.start(path, time.perf_counter())
+    for _ in range(2):
+        connection._consume(
+            encode_message("/eos/out/event/cue/1/58/fire", "Adriana Xs Center")
+        )
+    logger.stop()
+
+    assert heard == ["1/58", "1/58"]
+    logged = [
+        json.loads(line) for line in path.read_text(encoding="utf-8").splitlines()
+    ]
+    assert [line["value"] for line in logged if line["key"] == "eos.cue.fired"] == [
+        "1/58", "1/58",
+    ], "the bus log kept one fire of two"
+
+
+def test_a_link_that_drops_forgets_its_last_fire(bus: DataBus) -> None:
+    """The fire's timestamp is where the time in cue starts. A redial's state
+    dump names the live cue without firing it, so a fire kept across the drop
+    would hand its start to a dump naming the same cue, even one fired again
+    while the link was down.
+
+    The desk here sends the dump a real one sent and a fire, hangs up, and on
+    the redial sends the dump again and nothing more.
+    """
+    dump, dump_packets = _capture_stream("connect-state-dump.jsonl")
+    fire = _framed("/eos/out/event/cue/1/58/fire", "Adriana Xs Center")
+    server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    server.bind(("127.0.0.1", 0))
+    server.listen(2)
+    port = server.getsockname()[1]
+    accepted: list[socket.socket] = []
+
+    def desk() -> None:
+        for stream, hangs_up in ((dump + fire, True), (dump, False)):
+            try:
+                client, _ = server.accept()
+            except OSError:
+                return
+            accepted.append(client)
+            client.sendall(stream)
+            if hangs_up:
+                client.close()
+
+    threading.Thread(target=desk, daemon=True).start()
+    history: list[object] = []
+    bus.subscribe("eos.cue.fired", lambda entry: history.append(entry.value))
+    connection = EosConnection(
+        "eos", bus,
+        EosSettings(host="127.0.0.1", port=port, send_user=False, subscribe=False),
+    )
+    connection.start()
+    try:
+        assert wait_until(
+            lambda: connection.status.packets == 2 * dump_packets + 1, timeout=10.0
+        ), "the redial's dump never arrived"
+        assert len(accepted) == 2
+        assert bus.value("eos.connected") is True
+        assert bus.value("eos.cue.active.number") == "58"
+        assert history == ["1/58", ""], "the drop did not blank the last fire"
+        assert bus.value("eos.cue.fired") == ""
+    finally:
+        connection.stop()
+        for sock in accepted:
+            sock.close()
+        server.close()
+
+
 def test_eos_settings_round_trip_through_the_panel() -> None:
     """Loading a show file sets settings programmatically; the UI must follow.
 
@@ -670,7 +774,7 @@ def test_nobody_is_blamed_when_only_the_bound_user_is_talking() -> None:
 
 def test_a_quiet_desk_is_not_blamed_on_the_binding() -> None:
     """No cue fires means nobody is running cues. Silence is then just silence,
-    and the connection's own STALE state is what says so."""
+    and judging it is the connection's business, not the binding's."""
     connection = _eos(user=1)
     for minute in range(30):
         _at(connection, minute * 60.0)

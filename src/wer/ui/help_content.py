@@ -126,6 +126,9 @@ BUS_KEY_GROUPS: tuple[tuple[str, tuple[tuple[str, str], ...]], ...] = (
         ("eos.cue.active.progress", "Fade progress, 0.0 to 1.0"),
         ("eos.cue.active.fading", "True while a fade is running"),
         ("eos.cue.active.text", "The console's own one-line summary"),
+        ("eos.cue.fired", "The cue that last fired, as list/number, e.g. 1/58. "
+         "It changes on every fire, firing the live cue again included, and "
+         "blanks when the link drops"),
         ("eos.cue.pending.number", "The cue standing by"),
         ("eos.cue.pending.label", "Its name"),
         ("eos.cue.previous.number", "The cue you came from"),
@@ -135,7 +138,10 @@ BUS_KEY_GROUPS: tuple[tuple[str, tuple[tuple[str, str], ...]], ...] = (
         ("eos.cmdline.user.<n>.text", "A specific operator's command line"),
         ("eos.show.name", "Show file loaded on the desk"),
         ("eos.chan.active", "Channels currently selected"),
-        ("eos.connected", "True while data is arriving"),
+        ("eos.connected", "True while the console is connected. Over TCP that "
+         "is from its first message until the link drops; over UDP, or a TCP "
+         "link whose keepalive could not be set, it also goes false after two "
+         "minutes with nothing from the desk"),
         ("eos.softkey.<1-12>", "Softkey labels"),
     )),
     ("From the clock", (
@@ -316,9 +322,15 @@ default-configured console:</p>
 <tr><td><b>Connecting</b></td><td>Dialling.</td></tr>
 <tr><td><b>Waiting for data</b></td><td>Connected, but the console has said
     nothing. Almost always OSC TX switched off.</td></tr>
-<tr><td><b>Live</b></td><td>Data is arriving.</td></tr>
-<tr><td><b>Stale</b></td><td>Was live, nothing for two minutes. Normal during a
-    quiet stretch; a worry if you are pushing cues.</td></tr>
+<tr><td><b>Live</b></td><td>Data is arriving. Over TCP it stays Live for as long
+    as the link is open, however quiet the desk: the console says nothing
+    between cues while nobody touches it, and Wer checks the link itself
+    rather than waiting for the desk to speak.</td></tr>
+<tr><td><b>Stale</b></td><td>Was live, then nothing from the console for two
+    minutes. Only a UDP link reads this, or a TCP link whose keepalive could
+    not be set (the log says so when that happens); over TCP a quiet desk
+    stays Live. Normal during a quiet stretch; a worry if you are pushing
+    cues.</td></tr>
 <tr><td><b>Error</b></td><td>The message says what to check.</td></tr>
 </table>
 

@@ -154,15 +154,20 @@ PRESETS: tuple[WidgetPreset, ...] = (
         "cue_timer", "Time in cue", "Cue",
         "How long the live cue has been up, as m:ss. Counts from the start of "
         "the fade into the cue, or from the end of it; choose which in its "
-        "settings. Shows -- until it has seen a cue fire, so a cue that was "
-        "already up when Wer connected is never given a made-up start.",
+        "settings. The start is the console's own cue fire, so the time holds "
+        "through a quiet desk and is right when the layout comes back on "
+        "screen. Shows -- until a cue fires, so a cue that was already up "
+        "when Wer connected is never given a made-up start; -- too while the "
+        "console is not connected, and after a dropped link until the next "
+        "cue fires.",
         lambda i: CueTimerWidget(
             i,
             placement=Placement(Anchor.MIDDLE_LEFT),
             style=TextStyle(size=0.030),
             z_order=50,
         ),
-        ("eos.cue.active.number", "eos.cue.active.list", "eos.cue.active.fading"),
+        ("eos.cue.fired", "eos.cue.active.number", "eos.cue.active.list",
+         "eos.cue.active.fading", "eos.connected"),
     ),
     WidgetPreset(
         "fade_bar", "Fade progress bar", "Cue",

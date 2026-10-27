@@ -855,18 +855,6 @@ CUE_TIMER_STARTS: tuple[tuple[str, str], ...] = (
     ("fade_end", "The end of the fade into the cue"),
 )
 
-#: How long after a cue's number arrives a "not fading" report still belongs to
-#: that cue. The desk sends a cue and its fade state in one message, which the
-#: parser publishes key by key, microseconds apart.
-_SAME_REPORT = 0.25
-
-#: The longest a time-in-cue widget may go without looking and still trust the
-#: next change of cue it sees as the moment that cue fired. It looks every
-#: frame while its layout is on screen. After a longer gap it was off screen or
-#: had no picture, and the desk may have re-sent the cue since, which moves the
-#: timestamp the start would be read from.
-_WATCH_GAP = 0.5
-
 
 def _format_elapsed(seconds: float) -> str:
     """M:SS, or H:MM:SS from an hour on: a tech can sit in one cue that long."""
@@ -885,17 +873,33 @@ class CueTimerWidget(OverlayWidget):
     "fade_end", the moment its fade into the cue finished. Counting from the
     end holds at 0:00 while that fade is still running.
 
-    The desk sends no time a cue was fired, so the start is the moment Wer saw
-    the live cue change: the bus stamps every value as it arrives. That is only
-    true of a change seen as it happened. A cue already up when Wer connected,
-    or one that changed while this widget was off screen, had no picture, or
-    could not reach the desk, shows "--" until the next cue fires. Counting
-    from whenever Wer happened to notice would burn a confident wrong time into
-    the recording. The end of the fade is the first "not fading" report for the
-    cue, which the desk sends as the fade lands.
+    The start is the desk's own fire event. The desk sends no time with it, so
+    the time is when it arrived, which the bus stamps on ``eos.cue.fired`` --
+    and only a fire sets that key, so nothing the desk re-sends afterwards can
+    move it. The start used to be read from the live cue number instead, and
+    the desk re-sends that whenever it likes, so a start was trusted only when
+    this widget had watched the cue change; a quiet link that read Stale, or a
+    layout off screen, cost the whole cue. Now a widget that was not looking
+    still reads the right time when it next draws, and so does one whose desk
+    went quiet and spoke again.
+
+    It shows a time only for a fire that belongs to the live cue, while the
+    console is connected. A cue already up when Wer connected has no fire --
+    the connect dump names the live cue without firing it -- and neither does
+    a cue that went while the link was down, since the connection blanks the
+    fire key when a link drops. Both read "--" until the next fire. Counting
+    from whenever Wer happened to notice would burn a confident wrong time
+    into the recording.
+
+    Firing the live cue again starts the count again. It is a new marker and
+    a new chapter as well, and the three agree.
+
+    The end of the fade is the first "not fading" report after the fire, which
+    the desk sends as the fade lands.
     """
 
-    #: What a preview shows. A sample bus never fires a cue.
+    #: What a preview shows. A sample bus's fire is stamped when the preview
+    #: was built, so counting from it would only ever show 0:00.
     PREVIEW_SECONDS = 84.0
 
     def describe(self) -> str:
@@ -916,13 +920,11 @@ class CueTimerWidget(OverlayWidget):
         self.count_from = count_from
         #: Text in front of the time. Empty for the time alone.
         self.prefix = prefix
-        self._cue: tuple[object, object] | None = None
-        self._started_at: float | None = None
-        self._ended_at: float | None = None
-        #: When the widget last looked at the desk, and whether it saw a live
-        #: cue then. A change of cue is trusted only straight after a clear look.
-        self._looked_at: float | None = None
-        self._saw_cue = False
+        #: The fire the end of the fade below belongs to, by its stamp, and
+        #: when that fade landed. The bus keeps only the latest fade report,
+        #: so the first one after a fire has to be held on to here.
+        self._landing_for: float | None = None
+        self._landed_at: float | None = None
         self._drawn_text: str | None = None
 
     @property
@@ -938,57 +940,86 @@ class CueTimerWidget(OverlayWidget):
     @property
     def content_keys(self) -> list[str]:
         return [
+            f"{self.ns}.cue.fired",
             f"{self.ns}.cue.active.number",
             f"{self.ns}.cue.active.list",
             f"{self.ns}.cue.active.fading",
+            f"{self.ns}.connected",
         ]
 
-    def _follow(self, bus: DataBus, now: float) -> bool:
-        """Keep up with the desk. True when the live cue's start is known."""
-        watched = self._looked_at is not None and now - self._looked_at <= _WATCH_GAP
-        self._looked_at = now
-        entry = bus.get(f"{self.ns}.cue.active.number")
+    def _fired_at(self, bus: DataBus, now: float) -> float | None:
+        """When the live cue was fired, or None when there is no knowing."""
         # "is False", not falsy: a bus that has never carried the connected
         # flag says nothing either way about the desk.
-        disconnected = bus.value(f"{self.ns}.connected") is False
-        if entry is None or entry.is_stale(now) or _blank(entry.value) or disconnected:
-            self._saw_cue = False
-            return False
-        cue = (bus.value(f"{self.ns}.cue.active.list"), entry.value)
-        if cue != self._cue:
-            trusted = self._cue is not None and self._saw_cue and watched
-            self._cue = cue
-            self._started_at = entry.updated_at if trusted else None
-            self._ended_at = None
-        self._saw_cue = True
-        if self._started_at is None:
-            return False
-        if self._ended_at is None:
+        if bus.value(f"{self.ns}.connected") is False:
+            return None
+        # A GO reaches the bus a key at a time while frames are being drawn:
+        # the fire first, then the live cue it names. So a frame can fall in
+        # between, and the live cue is read before the fire. The other way
+        # round, a GO landing between the two reads paired the fire from
+        # before it with the live cue from after it.
+        live = bus.get(f"{self.ns}.cue.active.number")
+        live_list = bus.value(f"{self.ns}.cue.active.list")
+        fired = bus.get(f"{self.ns}.cue.fired")
+        if fired is None or fired.is_stale(now) or _blank(fired.value):
+            return None
+        if live is not None and fired.updated_at > live.updated_at:
+            # A fire newer than the live cue is that frame, and nothing else.
+            # The fire's own cue follows it straight away, and every later
+            # message naming the live cue stamps it again, so once the GO has
+            # landed the live cue is always the newer of the two. Read as a
+            # cue that moved without firing, this frame drew "--" at a GO.
+            return fired.updated_at
+        if live is None or live.is_stale(now) or _blank(live.value):
+            return None
+        cue_list, _, number = str(fired.value).partition("/")
+        if (str(live_list), str(live.value)) != (cue_list, number):
+            # The live cue moved without a fire behind it, so the last fire
+            # is some other cue's start.
+            return None
+        return fired.updated_at
+
+    def _fade_landed_at(
+        self, bus: DataBus, fired_at: float, now: float
+    ) -> float | None:
+        """When the fade into the fired cue finished, or None while it runs."""
+        if self._landing_for != fired_at:
+            self._landing_for = fired_at
+            self._landed_at = None
+        if self._landed_at is None:
             fading = bus.get(f"{self.ns}.cue.active.fading")
+            # Only a report from after the fire. Until the desk describes the
+            # new cue, ~100 ms behind its fire, the key still holds the last
+            # cue's, and a GO pressed just as that cue landed would otherwise
+            # start the count at the fire, with the new fade still to run.
+            # The fire stamp is set once and never moved, so there is no
+            # allowance either side of it: anything earlier is not this cue's.
             if (
                 fading is not None
                 and fading.value is not None
                 and not fading.value
                 and not fading.is_stale(now)
-                and fading.updated_at >= self._started_at - _SAME_REPORT
+                and fading.updated_at >= fired_at
             ):
-                self._ended_at = max(fading.updated_at, self._started_at)
-        return True
+                self._landed_at = fading.updated_at
+        return self._landed_at
 
     def _timer_text(self, bus: DataBus) -> str:
         now = time.perf_counter()
         number = bus.get(f"{self.ns}.cue.active.number")
         if number is not None and number.source_connection_id == SAMPLE_SOURCE:
             return self.prefix + _format_elapsed(self.PREVIEW_SECONDS)
-        if not self._follow(bus, now):
+        fired_at = self._fired_at(bus, now)
+        if fired_at is None:
             return self.prefix + MISSING
         if self.count_from == "fade_end":
-            if self._ended_at is None:
+            landed_at = self._fade_landed_at(bus, fired_at, now)
+            if landed_at is None:
                 if bus.value(f"{self.ns}.cue.active.fading") is None:
                     return self.prefix + MISSING
                 return self.prefix + _format_elapsed(0.0)
-            return self.prefix + _format_elapsed(now - self._ended_at)
-        return self.prefix + _format_elapsed(now - self._started_at)
+            return self.prefix + _format_elapsed(now - landed_at)
+        return self.prefix + _format_elapsed(now - fired_at)
 
     def wants_repaint(self, bus: DataBus) -> bool:
         """Redraw when the time shown has moved on: once a second, not every frame."""
